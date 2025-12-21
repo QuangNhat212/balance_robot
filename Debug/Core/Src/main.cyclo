@@ -1,0 +1,14 @@
+../Core/Src/main.c:80:6:Kalman_Init	1
+../Core/Src/main.c:98:7:Kalman_getAngle	1
+../Core/Src/main.c:134:6:Motor_Control	7
+../Core/Src/main.c:165:6:HAL_TIM_PeriodElapsedCallback	8
+../Core/Src/main.c:227:5:main	1
+../Core/Src/main.c:268:6:SystemClock_Config	3
+../Core/Src/main.c:314:13:MX_I2C1_Init	2
+../Core/Src/main.c:348:13:MX_TIM2_Init	3
+../Core/Src/main.c:397:13:MX_TIM3_Init	5
+../Core/Src/main.c:450:13:MX_TIM4_Init	3
+../Core/Src/main.c:499:13:MX_TIM5_Init	4
+../Core/Src/main.c:544:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:577:13:MX_GPIO_Init	1
+../Core/Src/main.c:624:6:Error_Handler	1
