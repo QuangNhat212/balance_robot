@@ -96,7 +96,6 @@ void Kalman_Init(Kalman_t *kalman) {
 // newRate: Tốc độ góc từ Gyro (deg/s)
 // dt: Thời gian lấy mẫu (giây)
 float Kalman_getAngle(Kalman_t *kalman, float newAngle, float newRate, float dt) {
-    // 1. DỰ ĐOÁN (PREDICT)
     // Dự đoán tốc độ thực = Tốc độ đo - Bias (nhiễu trôi)
     float rate = newRate - kalman->bias;
     kalman->angle += dt * rate;
@@ -107,7 +106,6 @@ float Kalman_getAngle(Kalman_t *kalman, float newAngle, float newRate, float dt)
     kalman->P[1][0] -= dt * kalman->P[1][1];
     kalman->P[1][1] += kalman->Q_bias * dt;
 
-    // 2. CẬP NHẬT (UPDATE)
     // Tính toán sai lệch giữa góc đo (Accel) và góc dự đoán
     float S = kalman->P[0][0] + kalman->R_measure; // Estimate error
     float K[2]; // Kalman Gain
